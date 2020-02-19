@@ -10,4 +10,7 @@ module.exports = function(app) {
         .get(controller.get_plant)
         .put(controller.update_plant)
         .delete(controller.delete_plant);
+    app.route('/')
+        .get(console.log("get request!!"))
+
 }
