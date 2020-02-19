@@ -1,0 +1,18 @@
+{
+  "name": "plantinfoapi",
+  "version": "1.0.0",
+  "description": "REST api for plant informations",
+  "main": "index.js",
+  "scripts": {
+    "test": "run"
+  },
+  "author": "Valentino Di Cianni",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.1"
+  }
+}
