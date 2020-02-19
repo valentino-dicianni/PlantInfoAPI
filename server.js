@@ -8,7 +8,7 @@ var express = require('express'),
     bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/plantAPI', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://valentino:Tasmanias1@@ds053648.mlab.com:53648/heroku_chms7xdj');
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
