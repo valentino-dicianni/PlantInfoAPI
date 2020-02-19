@@ -8,7 +8,11 @@ var express = require('express'),
     bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://test:test123@ds053648.mlab.com:53648/heroku_chms7xdj', { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect('mongodb://test:test123@ds053648.mlab.com:53648/heroku_chms7xdj', { useUnifiedTopology: true, useNewUrlParser: true })
+    .then(
+        () => { console.log('Connected to DB') },
+        err => { console.log('ERROR connecting to db: ' + err) }
+    );
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
