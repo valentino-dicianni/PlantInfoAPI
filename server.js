@@ -8,7 +8,7 @@ var express = require('express'),
     bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://valentino:Tasmanias1@@ds053648.mlab.com:53648/heroku_chms7xdj');
+mongoose.connect('mongodb://test:test123@ds053648.mlab.com:53648/heroku_chms7xdj');
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
