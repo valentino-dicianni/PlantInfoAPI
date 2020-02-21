@@ -31,11 +31,11 @@ exports.get_plant = (req, res) => {
 };
 
 exports.get_all_plant_type = (req, res) => {
-    Plant.distinct("name" (err, task => {
+    Plant.distinct("name", (err, task) => {
         if (err)
             res.send(err);
         res.json(task);
-    }));
+    });
 }
 
 exports.update_plant = (req, res) => {
