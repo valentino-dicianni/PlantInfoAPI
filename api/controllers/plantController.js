@@ -41,3 +41,7 @@ exports.get_all_plant_type = (req, res) => {
 exports.update_plant = (req, res) => {
 
 };
+
+exports.get_response_cnn = (req, res) => {
+    res.json({ respnse: "no desease found!" });
+};
