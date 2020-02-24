@@ -43,5 +43,5 @@ exports.update_plant = (req, res) => {
 };
 
 exports.get_response_cnn = (req, res) => {
-    res.json({ respnse: "no desease found!" });
+    res.json({ response: "no disease found!" });
 };
