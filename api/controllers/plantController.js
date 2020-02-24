@@ -43,13 +43,15 @@ exports.update_plant = (req, res) => {
 };
 
 exports.get_response_cnn = (req, res) => {
-    res.json(delay());
+    wait(2000);
+    res.json({ response: "no disease found!" });
 
 };
 
-async function delay() {
-    cLog("Start");
-    await new Promise(done => setTimeout(() => done(), 55000));
-    cLog("End");
-    return { response: "no disease found!" };
+function wait(ms) {
+    var start = Date.now(),
+        now = start;
+    while (now - start < ms) {
+        now = Date.now();
+    }
 }
