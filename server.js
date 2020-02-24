@@ -27,5 +27,4 @@ var routes = require('./api/routes/plantRoutes');
 routes(app);
 
 app.listen(port);
-
 console.log('plantAPI RESTful API server started on: ' + port);

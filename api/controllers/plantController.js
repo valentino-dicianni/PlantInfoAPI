@@ -43,5 +43,13 @@ exports.update_plant = (req, res) => {
 };
 
 exports.get_response_cnn = (req, res) => {
-    res.json({ response: "no disease found!" });
+    res.json(delay());
+
 };
+
+async function delay() {
+    cLog("Start");
+    await new Promise(done => setTimeout(() => done(), 55000));
+    cLog("End");
+    return { response: "no disease found!" };
+}
