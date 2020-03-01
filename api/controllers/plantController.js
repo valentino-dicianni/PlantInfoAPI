@@ -47,7 +47,7 @@ exports.get_response_cnn = (req, res) => {
     res.json({
         "plantId": "1213",
         "ill": true,
-        "disease": "enterococcus plantalis"
+        "disease": "coronavirus plantalis indecentis"
     });
 
 };
