@@ -45,7 +45,7 @@ exports.update_plant = (req, res) => {
 exports.get_response_cnn = (req, res) => {
     wait(2000);
     res.json({
-        "plantID": "1213",
+        "plantId": "1213",
         "ill": true,
         "disease": "enterococcus plantalis"
     });
