@@ -33,12 +33,13 @@ exports.get_plant = (req, res) => {
 exports.get_recommendation = (req, res) => {
     let disease = req.params.disease;
     //console.log(plant, disease);
-    Plant.findOne({ 'name': req.params.name }, { 'name': disease }, (err, task) => {
-        if (err)
-            res.send(err);
-        console.log(task);
-        res.json(task);
-    });
+    Plant.findOne({ 'name': req.params.name, 'disease.name': disease }, { _id: 0, diseases: { $elemMatch: { 'name': disease } } },
+        (err, task) => {
+            if (err)
+                res.send(err);
+            console.log(task);
+            res.json(task);
+        });
 };
 
 exports.get_all_plant_type = (req, res) => {
