@@ -31,12 +31,12 @@ exports.get_plant = (req, res) => {
 };
 
 exports.get_recommendation = (req, res) => {
-    let plant = req.params.name;
     let disease = req.params.disease;
-    console.log(plant, disease);
-    Plant.findOne({ 'name': plant }, (err, task) => {
+    //console.log(plant, disease);
+    Plant.findOne({ 'name': req.params.name }, (err, task) => {
         if (err)
             res.send(err);
+        console.log(task);
         res.json(task.name);
     });
 };
