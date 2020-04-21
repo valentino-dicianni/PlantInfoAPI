@@ -31,9 +31,8 @@ exports.get_plant = (req, res) => {
 };
 
 exports.get_recommendation = (req, res) => {
-    let disease = req.params.disease;
     //console.log(plant, disease);
-    Plant.findOne({ 'name': req.params.name, 'disease.name': disease }, { _id: 0, diseases: { $elemMatch: { 'name': disease } } },
+    Plant.findOne({ 'name': req.params.name }, { _id: 0, 'diseases': { $elemMatch: { 'name': req.params.disease } } },
         (err, task) => {
             if (err)
                 res.send(err);
