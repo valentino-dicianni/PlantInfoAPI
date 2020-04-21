@@ -34,6 +34,11 @@ exports.get_recommendation = (req, res) => {
     let plant = req.params.name;
     let disease = req.params.disease;
     console.log(plant, disease);
+    Plant.findOne({ 'name': plant }, (err, task) => {
+        if (err)
+            res.send(err);
+        res.json(task.disease);
+    });
 };
 
 exports.get_all_plant_type = (req, res) => {

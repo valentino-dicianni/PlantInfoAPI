@@ -12,6 +12,7 @@ var PlantSchema = new Schema({
     wamount: Number,
     temperature: Number,
     light: Number,
-    humidity: Number
+    humidity: Number,
+    disease: [{ name: String, description: String, prevention: String, treating: String }]
 });
 module.exports = mongoose.model('Plants', PlantSchema);
