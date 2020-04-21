@@ -37,7 +37,7 @@ exports.get_recommendation = (req, res) => {
     Plant.findOne({ 'name': plant }, (err, task) => {
         if (err)
             res.send(err);
-        res.json(task.disease);
+        res.json(task.name);
     });
 };
 
