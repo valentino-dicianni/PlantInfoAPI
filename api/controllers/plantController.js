@@ -37,7 +37,7 @@ exports.get_recommendation = (req, res) => {
         if (err)
             res.send(err);
         console.log(task);
-        res.json(task.name);
+        res.json(task.diseases);
     });
 };
 
