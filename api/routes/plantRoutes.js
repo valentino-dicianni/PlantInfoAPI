@@ -13,7 +13,8 @@ module.exports = function(app) {
         .get(controller.get_plant)
         .put(controller.update_plant)
 
-    app.route('/cnn')
-        .get(controller.get_response_cnn)
+    app.route('/plnats/:name/:disease')
+        .get(controller.get_recommendation)
+
 
 }

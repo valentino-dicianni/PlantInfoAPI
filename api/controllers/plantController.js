@@ -30,6 +30,12 @@ exports.get_plant = (req, res) => {
 
 };
 
+exports.get_recommendation = (req, res) => {
+    let plant = req.params.name;
+    let disease = req.params.disease;
+    console.log(plant, disease);
+};
+
 exports.get_all_plant_type = (req, res) => {
     Plant.distinct("name", (err, task) => {
         if (err)
@@ -41,21 +47,3 @@ exports.get_all_plant_type = (req, res) => {
 exports.update_plant = (req, res) => {
 
 };
-
-exports.get_response_cnn = (req, res) => {
-    wait(2000);
-    res.json({
-        "plantId": "1213",
-        "ill": true,
-        "disease": "coronavirus plantalis indecentis"
-    });
-
-};
-
-function wait(ms) {
-    var start = Date.now(),
-        now = start;
-    while (now - start < ms) {
-        now = Date.now();
-    }
-}
